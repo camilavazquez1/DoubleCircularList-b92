@@ -39,7 +39,9 @@ Notice how the next pointer of the last node points to the first node. Similarly
 
 One of the member functions that you will provide to the `DoubleCircularList` is `next()`, this simply moves the head pointer to the next object in the list. If there is only one item in the list or the list is empty, nothing happens. For example, L.next() would have this effect:
 
-You are provided with the declaration of the `Job` and `DoubleCircularList` classes.  You will implement the functions of the `DoubleCircularList`.
+You are provided with the declaration of the `Job` and `DoubleCircularList` classes.  You will implement the functions of the `DoubleCircularList` see the `DoubleCircularList.h` for documentation on how the classes should work.
+
+In `main.cpp`, please implement the necessary tests to demonstrate that your ADT is working correctly.
 
 
 
