@@ -21,10 +21,10 @@ private:
     int duration;
 public:
     Job(int _id, int _start, int duration);
-    void display(ostream &out);
+    string toString() const;
 };
 
-ostream& operator<<(ostream &out, Job &j);
+
 
 #endif //CPUSCHEDULER_JOB_H
 

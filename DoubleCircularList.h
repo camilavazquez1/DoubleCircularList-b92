@@ -27,15 +27,15 @@ public:
     // defined as the node immidiately preceeding the current node.
     void add(const Job &data);
 
-    // Removes the current node, moves the current pointer to the next node, and returns a copy to
+    // Removes the current node, moves the current pointer to the next node, and returns a pointer to
     // the recently removed node. If the list is empty, this should return null. If there is only
     // one item in the list, it should be removed and current should refer to null.
-    Job getCurrent();
+    DNode* removeCurrent();
 
 
-    // Returns a copy of the job in the current node. It does not remove the node from the
+    // Returns a pointer to the current node. It does not remove the node from the
     // list or move the current pointer. If the list is empty, null is returned.
-    Job removeCurrent();
+    DNode* getCurrent();
 
     // Simply moves the current pointer to the next object in the list. If there is only one item
     // in the list or the list is empty, nothing happens.

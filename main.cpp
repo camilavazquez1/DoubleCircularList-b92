@@ -3,5 +3,6 @@
 #include "DoubleCircularList.h"
 
 TEST_CASE( "DCL", "[dcl]" ) {
-    DoubleCircularList L;
+    Job J(1,2,3);
+    REQUIRE(J.toString() == "[1 2 3]");
 }

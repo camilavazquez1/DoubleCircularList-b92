@@ -12,11 +12,6 @@ Job::Job(int _id, int _start, int _duration) :
         id(_id), start(_start), duration(_duration) {}
 
 
-void Job::display(std::ostream &out) {
-    out << " [ " << id << ", " << start <<  ", "  << duration <<  "]" << endl;
-}
-
-ostream& operator<<(ostream &out, Job &j) {
-    j.display(out);
-    return out;
+string Job::toString() const {
+    return "[" + to_string(id) + " " + to_string(start) + " " + to_string(duration) + "]";
 }
