@@ -45,7 +45,6 @@ In `main.cpp`, please implement the necessary tests to demonstrate that your ADT
 
 
 
+### FAQ
 
-
-
-
+* Yes, you may add member functions to the Job class.
