@@ -1,5 +1,7 @@
 //
-// Created by rarce on 03/10/20.
+// Clase para la lista circular doblemente enlazada. 
+// Camila Vazquez Rodriguez
+// 801-18-7684
 //
 
 #ifndef DOUBLECIRCULARLIST_DOUBLECIRCULARLIST_H
@@ -21,7 +23,7 @@ private:
 public:
 
     // Creates an empty List
-    DoubleCircularList() : head(NULL) {}
+    DoubleCircularList(): head(NULL) {}
 
     // Places a new object at the end of the list. The end of the list is
     // defined as the node immidiately preceeding the current node.

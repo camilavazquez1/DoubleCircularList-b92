@@ -1,5 +1,8 @@
 //
-// Created by rarce on 03/10/20.
+// Implementacion de la clase para la lista 
+// circular doblemente enlazada. 
+// Camila Vazquez Rodriguez
+// 801-18-7684
 //
 
 #include "DoubleCircularList.h"
@@ -17,54 +20,43 @@ void DoubleCircularList::add(const Job& data){
   }
   else {
       tail = head->prev;
-      //new_node = tail->next;
       tail->next = newNode;
       newNode->prev = tail;
       newNode->next = head;
       head->prev = newNode;
       tail = newNode;
-
   }
+
 }
 
-DNode* DoubleCircularList::removeCurrent(){
-    DNode* tail, *curr, *bye;
-    
-    if (head == NULL) {
-        return NULL;
-    }
-    else if (head != NULL) {
-        if (head = head->prev) {
-            curr = head;
-            bye = curr;
-            curr = NULL;
-            head = curr;
-            return bye;
-        }
+DNode* DoubleCircularList::removeCurrent() {
 
-        else {
-            tail = head->prev;
-            curr = head;
-            bye = curr;
-            curr = curr->next;
-            head = curr;
-            bye->prev = bye->next = NULL;
-            curr->prev = tail;
-            tail->next = curr;
-            return bye;
-        }
+
+    if (head == NULL) return NULL;
+
+  
+     DNode* currnode = head;
+     DNode* tail = head->prev;
+     DNode* bye;
+
+     if (head == tail) {
+         head = NULL;
+         return currnode;
+     }
+     else {
+         bye = head;
+         head = head->next;
+         return bye;
     }
 }
 
 DNode* DoubleCircularList::getCurrent() {
-  
-    if (head == NULL)return head;
     return head; 
 }
 
 void DoubleCircularList::next(){
-   
-    if (head!= NULL && head!= head->prev) head = head->next;       
+   if (head!= NULL && head!= head->prev) head = head->next; 
+
 }
 
 bool DoubleCircularList::isEmpty(){
@@ -73,14 +65,17 @@ bool DoubleCircularList::isEmpty(){
 }
 
 string DoubleCircularList::toString() const {
-    string res= "[";
-    DNode* tail = head->prev, *curr = head;
- 
-    while (curr != NULL) {
-        res += curr->data.toString;
-        if (curr!= tail) res = " ";
-        curr = curr->next;
+    
+    if(head == NULL) return "none";
+
+    DNode *currnode = head;
+    string counter;
+    counter.append(currnode->data.toString());
+    for(currnode = head->next ; head != currnode;currnode = currnode->next){
+        counter.append(currnode->data.toString());
     }
-    res = "]";
-    return res;
+    return counter;   
 }
+
+
+

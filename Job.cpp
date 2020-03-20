@@ -1,5 +1,7 @@
 //
-// Created by rarce on 03/10/20.
+// Implementacion clase Job 
+// Camila Vazquez Rodriguez
+// 801-18-7684
 //
 
 
